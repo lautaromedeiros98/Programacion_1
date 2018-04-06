@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1522803649 source:d:\asd\calculadoratipoc.c
+
+1522803646 source:d:\asd\main.c
+	<stdio.h>
+	<stdlib.h>
+	"CalculadoraTipoH.h"
+
+1522803683 d:\asd\calculadoratipoh.h
+
