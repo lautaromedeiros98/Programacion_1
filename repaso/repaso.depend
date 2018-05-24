@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1527167754 source:c:\users\lalo\desktop\repaso\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"cliente.h"
+	<string.h>
+
+1526469646 c:\users\lalo\desktop\repaso\utn.h
+
+1527167880 source:c:\users\lalo\desktop\repaso\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cliente.h"
+
+1527167798 c:\users\lalo\desktop\repaso\cliente.h
+
+1526469632 source:c:\users\lalo\desktop\repaso\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
