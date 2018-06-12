@@ -203,11 +203,8 @@ int al_remove(ArrayList* this,int index)
     int a;
     if(this!=NULL && index>=0 && index < this->reservedSize)
     {
-        a=contract(this,index);
-        if(!a)
-        {
-            returnAux=0;
-        }
+        contract(this,index);
+        returnAux=0;
     }
     return returnAux;
 }
@@ -275,23 +272,16 @@ ArrayList* al_clone(ArrayList* this)
 int al_push(ArrayList* this, int index, void* pElement)
 {
     int returnAux = -1;
-    if(this!=NULL && pElement!=NULL && index>=0 && index <-this->size)
+    if(this != NULL && pElement != NULL && index >= 0 && index <= this->size)
     {
-            expand(this,index);
-            this->pElements[index]=pElement;
-            this->size++;
-            returnAux=0;
-    }
-    else if(index==this->size)
-    {
-        if(!al_add(this,pElement))
+        if(!expand(this, index))
         {
-            returnAux=0;
+            al_set(this, index, pElement);
+            returnAux = 0;
         }
     }
     return returnAux;
 }
-
 
 
 /** \brief Returns the index of the first occurrence of the specified element
@@ -352,7 +342,21 @@ int al_isEmpty(ArrayList* this)
 void* al_pop(ArrayList* this,int index)
 {
     void* returnAux = NULL;
-
+    int i;
+    int size;
+    if(this!=NULL && index >=0 && index < this->size)
+    {
+        size = this->size;
+        for(i=0; i<size; i++)
+        {
+            if(this->pElements[i] == this->pElements[index])
+            {
+                returnAux = this->pElements[index];
+                al_remove(this,index);
+                break;
+            }
+        }
+    }
     return returnAux;
 }
 
@@ -368,11 +372,17 @@ void* al_pop(ArrayList* this,int index)
 ArrayList* al_subList(ArrayList* this,int from,int to)
 {
     void* returnAux = NULL;
-
+    int i;
+    if(this != NULL && from >= 0 && to >= from && to <= this->size)
+    {
+        returnAux = al_newArrayList();
+        for(i = from; i <= to; i++)
+        {
+            al_add(returnAux, this->pElements[i]);
+        }
+    }
     return returnAux ;
 }
-
-
 
 
 
@@ -384,37 +394,24 @@ ArrayList* al_subList(ArrayList* this,int from,int to)
  */
 int al_containsAll(ArrayList* this,ArrayList* this2)
 {
-    int returnAux = -1;
     int i;
-    int j;
+    int returnAux = -1;
     int contador=0;
+    int size=this->size;
     if(this!=NULL && this2!=NULL)
     {
-        for(i=0;i<al_len(this);i++)
+        for(i=0;i<size;i++)
         {
-          for(j=0;j<al_len(this2);j++)
-          {
-              if(this->pElements[i] != this2->pElements[j])
-              {
-                continue;
-              }
-              else
-              {
-                  contador++;
-                  break;
-              }
-          }
-        }
-        if(contador == this2->size)
-        {
-            returnAux=0;
-        }
-        else
-        {
-            returnAux=1;
+           if(this->pElements[i] == this2->pElements[i] && this->size == this2->size)
+           {
+                returnAux=1;
+           }
+           else
+           {
+               returnAux=0;
+           }
         }
     }
-
     return returnAux;
 }
 
@@ -506,6 +503,5 @@ int contract(ArrayList* this,int index)
       }
       this->size--;
     }
-
     return returnAux;
 }
