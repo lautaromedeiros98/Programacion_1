@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1529017311 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/destinatario.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+	<string.h>
+
+1529016481 /home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/destinatario.h
+
+1524691840 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691840 /home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/utn.h
+
+1529015929 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/ArrayList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1528420868 /home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/ArrayList.h
+
+1529018234 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+
+1529016333 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1529018377 source:/home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+	"utn.h"
+
+1529016406 /home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/arraylist.h
+
+1529016903 /home/alumno/Documentos/asd/Practica parcial arraylist/PracticaParcial/parser.h
+
+1529016333 source:/home/alumno/asd/Practica parcial arraylist/PracticaParcial/arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1528420868 /home/alumno/asd/Practica parcial arraylist/PracticaParcial/ArrayList.h
+
+1529017311 source:/home/alumno/asd/Practica parcial arraylist/PracticaParcial/destinatario.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+	<string.h>
+
+1529018911 /home/alumno/asd/Practica parcial arraylist/PracticaParcial/arraylist.h
+
+1529016481 /home/alumno/asd/Practica parcial arraylist/PracticaParcial/destinatario.h
+
+1529016903 /home/alumno/asd/Practica parcial arraylist/PracticaParcial/parser.h
+
+1529019942 source:/home/alumno/asd/Practica parcial arraylist/PracticaParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+	"utn.h"
+
+1524691840 /home/alumno/asd/Practica parcial arraylist/PracticaParcial/utn.h
+
+1529018377 source:/home/alumno/asd/Practica parcial arraylist/PracticaParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"arraylist.h"
+	"destinatario.h"
+	"parser.h"
+	"utn.h"
+
+1524691840 source:/home/alumno/asd/Practica parcial arraylist/PracticaParcial/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
