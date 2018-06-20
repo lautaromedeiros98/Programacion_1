@@ -195,3 +195,53 @@ int cliente_listarClientes(ArrayList* this)
     }
     return retorno;
 }
+
+int cliente_baja(ArrayList* this,int index)
+{
+    int retorno=-1;
+    Cliente* clienteAuxiliar=NULL;
+    int idAuxiliar;
+    int i;
+    if(this!=NULL && index>=0)
+    {
+        retorno=0;
+        for(i=0;i<al_len(this);i++)
+        {
+            clienteAuxiliar=al_get(this,i);
+            idAuxiliar=cliente_getId(clienteAuxiliar,&index);
+            if(i==idAuxiliar)
+            {
+                al_remove(this,i);
+            }
+        }
+    }
+    return retorno;
+}
+
+int cliente_modificacion(ArrayList* this,int index)
+{
+    Cliente* auxiliar;
+    int retorno=-1;
+    char nombre[50];
+    char apellido[50];
+    char dni[20];
+    if(this!=NULL && index>=0)
+    {
+        retorno=-2;
+        if(getString("Nombre?\n",nombre))
+        {
+            if(getString("Apellido?\n",apellido))
+            {
+                if(getString("Dni?\n",dni))
+                {
+                    retorno=0;
+                    auxiliar=al_get(this,index);
+                    cliente_setNombre(auxiliar,nombre);
+                    cliente_setApellido(auxiliar,apellido);
+                    cliente_setDni(auxiliar,dni);
+                }
+            }
+        }
+    }
+    return retorno;
+}

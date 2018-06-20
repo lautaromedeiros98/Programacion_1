@@ -17,7 +17,6 @@ int parser_guardarEnArchivo(char* path,ArrayList* clientes)
     if(clientes!=NULL && pFile!=NULL)
     {
         retorno=0;
-        fprintf(pFile,"Nombre - Apellido - Dni - Id\n");
         for(i=0;i<al_len(clientes);i++)
         {
             auxiliar=al_get(clientes,i);
@@ -45,11 +44,10 @@ int parser_leerDelArchivo(char* path,ArrayList* clientes)
     if(pFile!=NULL)
     {
         retorno=0;
-        fscanf(pFile,"%[^,],%[^,],%[^,],%d,%[^\n]\n",nombre,apellido,dni,id);
         while(!feof(pFile))
         {
-            fscanf(pFile,"%[^,],%[^,],%[^,],%d,%[^\n]\n",nombre,apellido,dni,id);
-            auxiliar=cliente_newLoad(nombre,apellido,dni,id);
+            fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",nombre,apellido,dni,id);
+            auxiliar=cliente_newLoad(nombre,apellido,dni,atoi(id));
             al_add(clientes,auxiliar);
         }
     }

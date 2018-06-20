@@ -9,6 +9,7 @@ int main()
 {
     ArrayList* clientes=al_newArrayList();
     parser_leerDelArchivo("clientes.txt",clientes);
+    int id;
     int menu;
     do
     {
@@ -17,6 +18,17 @@ int main()
         {
         case 1:
             cliente_alta(clientes);
+            parser_guardarEnArchivo("clientes.txt",clientes);
+            break;
+        case 2:
+            getValidInt("Ingresa el id del usuario a modificar\n","error",&id,0,50,10);
+            cliente_modificacion(clientes,id);
+            parser_guardarEnArchivo("clientes.txt",clientes);
+            break;
+        case 3:
+            cliente_listarClientes(clientes);
+            getValidInt("Ingresa el id del usuario a eliminar\n","error",&id,0,50,10);
+            cliente_baja(clientes,id);
             parser_guardarEnArchivo("clientes.txt",clientes);
             break;
         case 4:

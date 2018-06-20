@@ -16,7 +16,7 @@
 
 1528914066 d:\practica1h\utn.h
 
-1529451857 source:d:\practica1h\cliente.c
+1529457059 source:d:\practica1h\cliente.c
 	"cliente.h"
 	<stdio.h>
 	<stdlib.h>
@@ -24,10 +24,10 @@
 	"utn.h"
 	"ArrayList.h"
 
-1529451705 d:\practica1h\cliente.h
+1529457042 d:\practica1h\cliente.h
 	"ArrayList.h"
 
-1529450986 source:d:\practica1h\main.c
+1529457186 source:d:\practica1h\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"
@@ -35,7 +35,7 @@
 	"utn.h"
 	"parser.h"
 
-1529451742 source:d:\practica1h\parser.c
+1529456506 source:d:\practica1h\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"

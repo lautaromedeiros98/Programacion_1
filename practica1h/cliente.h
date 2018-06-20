@@ -27,3 +27,5 @@ int cliente_getDni(Cliente *this, char* dni);
 Cliente* cliente_newAlta(char* nombre, char* apellido,char* dni);
 int cliente_alta(ArrayList* this);
 int cliente_listarClientes(ArrayList* this);
+int cliente_baja(ArrayList* this,int index);
+int cliente_modificacion(ArrayList* this,int index);
